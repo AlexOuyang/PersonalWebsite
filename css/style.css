@@ -105,6 +105,10 @@ a:hover {
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
+	transition: color 0.75s ease;
+	-moz-transition: color 0.75s ease;
+	-webkit-transition: color 0.75s ease;
+	-o-transition: color 0.75s ease;
 	margin-right: 0%;
 	margin-bottom: 0%;
 	border-bottom: none;
@@ -173,19 +177,130 @@ a:hover {
 	background-color: rgba(26, 188, 156, 0.3);
 }*/
 
-
-/* === WORDSEARCH - Letters === */
-#wordsearch {
+/* === boardLayout - the board layout for the other pages besides index.html === */
+#boardLayout {
 	width: 100%;
 	float: left;
 }
 
-#wordsearch ul {
+#boardLayout ul {
 	margin: 0px;
 	padding: 0px;
 }
 
-#wordsearch ul li {
+#boardLayout ul li {
+	opacity: 0.6;
+	float: left;
+	width: 25%;
+/*	background-color: rgba(0, 0, 0, .2);
+*/	
+	list-style: none;
+	margin-right: 0%;
+	margin-bottom: 0%;
+	padding: 0;
+	display: block;
+	text-align: center;
+/*	color: rgba(255, 255, 255, 0.7);    */	
+	color: rgba(255, 255, 255, 0);    
+/*	text-transform: uppercase;
+*/	overflow: hidden;
+	font-size: 5vw;
+	font-weight: 400;
+	transition: background-color 0.75s ease;
+	-moz-transition: background-color 0.75s ease;
+	-webkit-transition: background-color 0.75s ease;
+	-o-transition: background-color 0.75s ease;
+	transition: color 0.75s ease;
+	-moz-transition: color 0.75s ease;
+	-webkit-transition: color 0.75s ease;
+	-o-transition: color 0.75s ease;
+}
+
+
+/* unselected letters, already darkened*/
+#boardLayout ul li.color-darker {
+	background-color: rgba(0, 0, 0, .2);
+	color: rgba(255, 255, 255, .8); 
+}
+
+/* Social Media image layout */
+#boardLayout ul li .social-media img {
+	margin-top: 20%;
+	margin-left: 20%;
+	zoom: 1;
+	display: block;
+	max-height: 80%;
+	max-width: 80%;
+}
+
+/* Project Image layout */
+#boardLayout ul li img {
+	margin-top: 10%;
+	margin-left: 10%;
+	zoom: 1;
+	display: block;
+	max-height: 78%;
+	max-width: 78%;
+}
+
+/* unselected letters, when hover darker its color*/
+#boardLayout ul li:hover {
+/*	background-color: rgba(0, 0, 0, .7);
+*/	color: rgba(255, 255, 255, .8);
+	font-size: 6vw;
+	font-weight: 800;
+}
+
+/*#board_main ul li.zoomed {
+	zoom: 1;
+	background-color: rgba(0, 0, 0, .7);
+	color: rgba(255, 255, 255, .6);
+	font-size: 6vw;
+	font-weight: 800;
+}*/
+
+#boardLayout ul li.zoomed:hover {
+	/*background-color: rgba(0, 0, 0, 0.9);*/
+	color: rgba(255, 255, 255, 1);
+	font-size: 6vw;
+	font-weight: 800;
+}
+
+#boardLayout ul li.selected {
+	background-color: rgba(16, 188, 156, 0);
+	color: rgba(0, 0, 0, 1);
+/*	color: rgba(255, 255, 255, 0.9);
+*/	font-size: 4vw;
+	font-weight: 800;
+}
+
+#boardLayout ul li.selected:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: rgba(255, 255, 255, 1);
+	font-size: 20vw;
+	transition: font-size 0.75s ease;
+	-moz-transition: font-size 0.75s ease;
+	-webkit-transition: font-size 0.75s ease;
+	-o-transition: font-size 0.75s ease;
+	font-weight: 800;
+}
+
+
+
+/* === boardLayout_main - the board layout for the index page === */
+
+#boardLayout_main {
+	width: 100%;
+	float: left;
+}
+
+#boardLayout_main ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#boardLayout_main ul li {
 	float: left;
 	width: 7.69%;
 /*	background-color: rgba(0, 0, 0, .2);
@@ -206,15 +321,20 @@ a:hover {
 	-moz-transition: background-color 0.75s ease;
 	-webkit-transition: background-color 0.75s ease;
 	-o-transition: background-color 0.75s ease;
+	transition: color 0.75s ease;
+	-moz-transition: color 0.75s ease;
+	-webkit-transition: color 0.75s ease;
+	-o-transition: color 0.75s ease;
 }
 
+
 /* unselected letters, already darkened*/
-#wordsearch ul li.color-darker {
+#boardLayout_main ul li.color-darker {
 	background-color: rgba(0, 0, 0, .2);
 	color: rgba(255, 255, 255, .8); 
 }
 
-#wordsearch ul li img {
+#boardLayout_main ul li img {
 	margin-top: 20%;
 	margin-left: 20%;
 	zoom: 1;
@@ -224,14 +344,14 @@ a:hover {
 }
 
 /* unselected letters, when hover darker its color*/
-#wordsearch ul li:hover {
+#boardLayout_main ul li:hover {
 	background-color: rgba(0, 0, 0, .7);
 	color: rgba(255, 255, 255, .8);
 	font-size: 6vw;
 	font-weight: 800;
 }
 
-/*#wordsearch ul li.zoomed {
+/*#board_main ul li.zoomed {
 	zoom: 1;
 	background-color: rgba(0, 0, 0, .7);
 	color: rgba(255, 255, 255, .6);
@@ -239,21 +359,22 @@ a:hover {
 	font-weight: 800;
 }*/
 
-#wordsearch ul li.zoomed:hover {
+#boardLayout_main ul li.zoomed:hover {
 	background-color: rgba(0, 0, 0, 0.9);
 	color: rgba(255, 255, 255, 1);
 	font-size: 6vw;
 	font-weight: 800;
 }
 
-#wordsearch ul li.selected {
+#boardLayout_main ul li.selected {
 	background-color: rgba(16, 188, 156, .8);
 	color: rgba(0, 0, 0, 1);
-	font-size: 6vw;
+/*	color: rgba(255, 255, 255, 0.9);
+*/	font-size: 6vw;
 	font-weight: 800;
 }
 
-#wordsearch ul li.selected:hover {
+#boardLayout_main ul li.selected:hover {
 	background-color: rgba(0, 188, 156, 0);
 	color: rgba(255, 255, 255, 1);
 	font-size: 7vw;
@@ -271,14 +392,14 @@ a:hover {
 		top: 0%;
 	}
 
-	#wordsearch {
+	#boardLayout_main {
 		width: 100%;
 		height: 100%;
 		float: none;
 		margin: 0 auto;
 	}
 
-	#wordsearch ul li {
+	#boardLayout_main ul li {
 		font-size: 4vw;
 	}
 
@@ -313,5 +434,6 @@ a:hover {
 /* === Drifting Dots Canvas Animation === */
 #canvas {
 	position: absolute;
+	height: 115%;
 	z-index: -100;
 }

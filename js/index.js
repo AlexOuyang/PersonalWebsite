@@ -4,8 +4,11 @@ $(function() {
         // Reset the height of each li elements
     $("li").css("height", liWidth);
     $("li").css("lineHeight", liWidth);
-    var totalHeight = $("#wordsearch").css("width");
-    $("#wordsearch").css("height", totalHeight);
+
+    var totalHeight = $("#boardLayout_main").css("width")/2;
+    $("#boardLayout_main").css("height", totalHeight);
+    var totalHeight = $("#boardLayout").css("width")/2;
+    $("#boardLayout").css("height", totalHeight);
 });
 
 causeRepaintsOn = $("h1, h2, h3, p");
@@ -22,8 +25,10 @@ $(window).on('resize', function() {
     $("li").css("height", liWidth);
     $("li").css("lineHeight", liWidth);
 
-    var totalHeight = $("#wordsearch").css("width");
-    $("#wordsearch").css("height", totalHeight);
+    var totalHeight = $("#boardLayout_main").css("width")/2;
+    $("#boardLayout_main").css("height", totalHeight);
+    var totalHeight = $("#boardLayout").css("width")/2;
+    $("#boardLayout").css("height", totalHeight);
 });
 
 $(function() {
@@ -49,10 +54,22 @@ $(function() {
 
   });
 
+    // Used for boardLayout_main in the Index.html
     // Loop through each selected elements to show words
     // welcome message gets executed first
     $( "li" ).each(function( index ) {
       if($(this).hasClass("showWords")) {
+        var el=$(this);
+        setTimeout(function() { 
+          el.addClass('selected');
+          //el[0].innerHTML = word.charAt(5);
+        }, index * 150); 
+      }
+    });
+
+     // Used for boardLayout in the other html pages
+    $( "li" ).each(function( index ) {
+      if($(this).hasClass("expandable")) {
         var el=$(this);
         setTimeout(function() { 
           el.addClass('selected');
