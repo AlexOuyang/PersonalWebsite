@@ -1,439 +1,229 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+/* ========= Style Sheet for Project Container and Angular Filter =========*/
 
-body {
-	background-color: #335B67;
-	background: -ms-radial-gradient(ellipse at center, #78C0A8 0%, #2C3E50 100%) fixed no-repeat;
-	background: -moz-radial-gradient(ellipse at center, #78C0A8 0%, #2C3E50 100%) fixed no-repeat;
-	background: -o-radial-gradient(ellipse at center, #78C0A8 0%, #2C3E50 100%) fixed no-repeat;
-	background: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #335B67), color-stop(1, #2C3E50));
-	background: -webkit-radial-gradient(ellipse at center, #78C0A8 0%, #2C3E50 100%) fixed no-repeat;
-	background: radial-gradient(ellipse at center, #78C0A8 0%, #2C3E50 100%) fixed no-repeat;
-	/*font-family: 'Source Sans Pro', sans-serif;*/
-	font-family: 'Carrois Gothic SC';
-	-webkit-font-smoothing: antialiased;
-	margin: 0px;
+/* ========================================================================*/
+
+/* ======================= By: Chenxing Ouyang  ===========================*/
+
+/* ========================================================================*/
+
+/* === Angular JS filter layout - used by angular ngFilter === */
+
+.animate-enter,
+.animate-leave {
+    transition: 500ms ease-in all;
+    position: relative;
+    display: block;
 }
 
-::selection {
-	background-color: rgba(0, 0, 0, 0.2);
+.animate-enter.animate-enter-active,
+.animate-leave {
+    left: 0;
 }
 
-::-moz-selection {
-	background-color: rgba(0, 0, 0, 0.2);
+.animate-leave.animate-leave-active,
+.animate-enter {
+    left: 500px;
 }
 
-a {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	margin-right: 10px;
+/* === project-container - the layout for the projects === */
+#projects {
+    position: relative;
+    margin-top: 10vh;
+}
+.project-container {
+    height: 200px;
+    width: 97%;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+    float: left;
+    margin: 12px 0;
+    position: relative;
 }
 
-a:last-child {
-	margin-right: 0px;
+.project-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
-a:hover {
-	text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
-	border-bottom: 1px solid rgba(255, 255, 255, 1);
+.project-container h5 {
+    margin-top: 0px;
 }
 
-#noscript-warning {
-	width: 100%;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.2);
-	font-weight: 500;
-	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+.project-img {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    float: left;
+    margin-right: 15px;
 }
 
-/* === WRAP === */
-#wrap {
-	width: 100%;
-	height: 100%;
-	max-width: 1500px;
-	margin: auto;
-	position: relative;
-	float: relative;
-	margin-top: 0%;
-	margin-left: 0%;
-	padding: 0px;
+.project-img img {
+    opacity: 0.85;
+    height: 200px;
+    width: 200px;
 }
 
-/* === MAIN TEXT CONTENT === */
-#main-content {
-	display:inline-block;
-	float: left;
-	width: 100%;
-	color: white;
-	font-weight: 800;
-/*	font-size: 48px;
-*/	
-	padding-bottom: 0px;
-	line-height: 28px;
-}
-
-#main-content h1 {
-	margin: 0px;
-	font-weight: 400;
-	font-size: 100px;
-	margin-bottom: 40px;
-	line-height: normal;
-}
-
-/* === NAVIGATION BUTTONS === */
-#navigation {
-	margin-top: 0%;
-}
-
-/* navigation button and text*/
-#navigation a.navigation {
-	float: left;
-	background-color: rgba(0, 0, 0, 0.7);
-	color: white;
-	height: 60px;
-	width: 256px;
-	line-height: 60px;
-	text-decoration: none;
-	font-size: 40px;
-	transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	transition: color 0.75s ease;
-	-moz-transition: color 0.75s ease;
-	-webkit-transition: color 0.75s ease;
-	-o-transition: color 0.75s ease;
-	margin-right: 0%;
-	margin-bottom: 0%;
-	border-bottom: none;
+.project-img img:hover {
+    opacity: 1;
+    height: 200px;
+    width: 200px;
 }
 
 
-
-#navigation a.navigation i {
-	line-height: 41px;
+.project-container h3 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* navigation hover to become transparent*/
-#navigation a.navigation:hover {
-	background-color: rgba(0, 0, 0, 0);
-	color: rgba(26, 188, 156, 1);
-	border-bottom: none;
+.project-description > p {
+    overflow-y: hidden;
+    max-height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+.project-description > p:after {
 
-/* === SEARCH FORM === */
-#search {
-	display: block;
-		margin-top: -5px;
-
+    /*content: "...";*/
+    position: absolute;
+    top: 130px;
+    right: 25px;
+    padding-left: 5px;
 }
 
-#search span{
-	zoom:1.5;
+.btn-view {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-color: rgba(26, 188, 156, 1);
+    background-color: rgba(26, 188, 156, 1);
+    border-radius: 0;
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
-#search input[type='text'] {
-	width: 200px;
-	height: 41px;
-	padding-left: 15px;
-	padding-rigt: 15px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.2);	
-	border: none;
-	outline: none;
-	-webkit-appearance: none;
-	font-size: 16px;
-	font-weight: 300;
-	color: white;
-	font-family: 'Source Sans Pro', sans-serif;
-	transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	border-radius: 0px;
+.btn-view:hover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 166, 137, 1);
+    border-color: rgba(23, 166, 137, 1);    /*background-color: rgba(17, 121, 100, 0);*/
+
+    /*border-color: rgba(17, 121, 100, 0);*/
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
-#search .input-search {
-	position: absolute;
-	margin-top: 15px;
-	margin-left: 5px;
-	width: 10%;
-	float: right;
-	height: 0px;
-	background-color: rgba(0, 0, 0, 0.2);
-	outline: none;
-	border: none;
+.btn-tag {
+    border-color: rgba(26, 188, 156, 1);
+    background-color: rgba(26, 188, 156, 1);
+    border-radius: 0;
 }
 
-/*#search .input-search:hover {
-	background-color: rgba(26, 188, 156, 0.3);
-}*/
-
-/* === boardLayout - the board layout for the other pages besides index.html === */
-#boardLayout {
-	width: 100%;
-	float: left;
-}
-
-#boardLayout ul {
-	margin: 0px;
-	padding: 0px;
-}
-
-#boardLayout ul li {
-	opacity: 0.6;
-	float: left;
-	width: 25%;
-/*	background-color: rgba(0, 0, 0, .2);
-*/	
-	list-style: none;
-	margin-right: 0%;
-	margin-bottom: 0%;
-	padding: 0;
-	display: block;
-	text-align: center;
-/*	color: rgba(255, 255, 255, 0.7);    */	
-	color: rgba(255, 255, 255, 0);    
-/*	text-transform: uppercase;
-*/	overflow: hidden;
-	font-size: 5vw;
-	font-weight: 400;
-	transition: background-color 0.75s ease;
-	-moz-transition: background-color 0.75s ease;
-	-webkit-transition: background-color 0.75s ease;
-	-o-transition: background-color 0.75s ease;
-	transition: color 0.75s ease;
-	-moz-transition: color 0.75s ease;
-	-webkit-transition: color 0.75s ease;
-	-o-transition: color 0.75s ease;
+.btn-tag:hover {
+    border-color: rgba(26, 188, 156, 1);
+    background-color: rgba(26, 188, 156, 1);
 }
 
 
-/* unselected letters, already darkened*/
-#boardLayout ul li.color-darker {
-	background-color: rgba(0, 0, 0, .2);
-	color: rgba(255, 255, 255, .8); 
+/* === #About - the layout for the projects === */
+
+
+.me-container {
+    height: 70vh;
+    width: 97%;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+    float: left;
+    margin: 20px 0;
+    position: relative;
 }
 
-/* Social Media image layout */
-#boardLayout ul li .social-media img {
-	margin-top: 20%;
-	margin-left: 20%;
-	zoom: 1;
-	display: block;
-	max-height: 80%;
-	max-width: 80%;
+.me-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 
-/* Project Image layout */
-#boardLayout ul li img {
-	margin-top: 10%;
-	margin-left: 10%;
-	zoom: 1;
-	display: block;
-	max-height: 78%;
-	max-width: 78%;
-}
-
-/* unselected letters, when hover darker its color*/
-#boardLayout ul li:hover {
-/*	background-color: rgba(0, 0, 0, .7);
-*/	color: rgba(255, 255, 255, .8);
-	font-size: 6vw;
-	font-weight: 800;
-}
-
-/*#board_main ul li.zoomed {
-	zoom: 1;
-	background-color: rgba(0, 0, 0, .7);
-	color: rgba(255, 255, 255, .6);
-	font-size: 6vw;
-	font-weight: 800;
-}*/
-
-#boardLayout ul li.zoomed:hover {
-	/*background-color: rgba(0, 0, 0, 0.9);*/
-	color: rgba(255, 255, 255, 1);
-	font-size: 6vw;
-	font-weight: 800;
-}
-
-#boardLayout ul li.selected {
-	background-color: rgba(16, 188, 156, 0);
-	color: rgba(0, 0, 0, 1);
-/*	color: rgba(255, 255, 255, 0.9);
-*/	font-size: 4vw;
-	font-weight: 800;
-}
-
-#boardLayout ul li.selected:hover {
-	opacity: 1;
-	background-color: rgba(0, 0, 0, 0.7);
-	color: rgba(255, 255, 255, 1);
-	font-size: 20vw;
-	transition: font-size 0.75s ease;
-	-moz-transition: font-size 0.75s ease;
-	-webkit-transition: font-size 0.75s ease;
-	-o-transition: font-size 0.75s ease;
-	font-weight: 800;
+.me-container h5 {
+    margin-top: 0px;
 }
 
 
-
-/* === boardLayout_main - the board layout for the index page === */
-
-#boardLayout_main {
-	width: 100%;
-	float: left;
+.me-container h3 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#boardLayout_main ul {
-	margin: 0px;
-	padding: 0px;
+.me-description p {
+    font-size: 2vw;
 }
 
-#boardLayout_main ul li {
-	float: left;
-	width: 7.69%;
-/*	background-color: rgba(0, 0, 0, .2);
-*/	
-	list-style: none;
-	margin-right: 0%;
-	margin-bottom: 0%;
-	padding: 0;
-	display: block;
-	text-align: center;
-/*	color: rgba(255, 255, 255, 0.7);    */	
-	color: rgba(255, 255, 255, 0);    
-/*	text-transform: uppercase;
-*/	overflow: hidden;
-	font-size: 5vw;
-	font-weight: 400;
-	transition: background-color 0.75s ease;
-	-moz-transition: background-color 0.75s ease;
-	-webkit-transition: background-color 0.75s ease;
-	-o-transition: background-color 0.75s ease;
-	transition: color 0.75s ease;
-	-moz-transition: color 0.75s ease;
-	-webkit-transition: color 0.75s ease;
-	-o-transition: color 0.75s ease;
+.me-description > p {
+    overflow-y: hidden;
+    max-height: 40vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.me-description > p:after {
+
+    /*content: "...";*/
+    position: absolute;
+    top: 130px;
+    right: 25px;
+    padding-left: 5px;
 }
 
 
-/* unselected letters, already darkened*/
-#boardLayout_main ul li.color-darker {
-	background-color: rgba(0, 0, 0, .2);
-	color: rgba(255, 255, 255, .8); 
+.me-description {
+    height: 100%;
+    width: 60%;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    display: inline-block;
+    position: absolute;
 }
 
-#boardLayout_main ul li img {
-	margin-top: 20%;
-	margin-left: 20%;
-	zoom: 1;
-	display: block;
-	max-height: 80%;
-	max-width: 80%;
+.me-img {
+    opacity: 0.85;
+    height: 30vw;
+    width: 30vw;
+    margin-left: 3vw;
+    margin-top: 3vw;
 }
 
-/* unselected letters, when hover darker its color*/
-#boardLayout_main ul li:hover {
-	background-color: rgba(0, 0, 0, .7);
-	color: rgba(255, 255, 255, .8);
-	font-size: 6vw;
-	font-weight: 800;
+.me-img:hover {
+    opacity: 1;
 }
 
-/*#board_main ul li.zoomed {
-	zoom: 1;
-	background-color: rgba(0, 0, 0, .7);
-	color: rgba(255, 255, 255, .6);
-	font-size: 6vw;
-	font-weight: 800;
-}*/
-
-#boardLayout_main ul li.zoomed:hover {
-	background-color: rgba(0, 0, 0, 0.9);
-	color: rgba(255, 255, 255, 1);
-	font-size: 6vw;
-	font-weight: 800;
-}
-
-#boardLayout_main ul li.selected {
-	background-color: rgba(16, 188, 156, .8);
-	color: rgba(0, 0, 0, 1);
-/*	color: rgba(255, 255, 255, 0.9);
-*/	font-size: 6vw;
-	font-weight: 800;
-}
-
-#boardLayout_main ul li.selected:hover {
-	background-color: rgba(0, 188, 156, 0);
-	color: rgba(255, 255, 255, 1);
-	font-size: 7vw;
-	font-weight: 800;
-}
-
-/* === RESPONSIVE CSS, acts on the contents when window resises to less than 667px=== */
-
-/*@media all and (max-width:667px) {
-	#wrap {
-		width: 100%;
-		height: 100%;
-		height: auto;
-		margin-top: 40px;
-		top: 0%;
-	}
-
-	#boardLayout_main {
-		width: 100%;
-		height: 100%;
-		float: none;
-		margin: 0 auto;
-	}
-
-	#boardLayout_main ul li {
-		font-size: 4vw;
-	}
-
-	#main-content {
-		float: none;
-		width: 90%;
-		max-width: 90%;
-		margin: 0 auto;
-		margin-top: 30px;
-		text-align: justify;
-	}
-
-	#main-content h1 {
-		text-align: left;
-	}
-
-	#search input[type='text'] {
-	}
-
-	#search .input-search {
-		width: 15%;
-	}
-
-}
-*/
-/*@media all and (max-width:499px) {
-	#main-content h1 {
-		font-size: 28px;
-	}
-*/
-
-/* === Drifting Dots Canvas Animation === */
-#canvas {
-	position: absolute;
-	height: 115%;
-	z-index: -100;
-}
