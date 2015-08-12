@@ -8,25 +8,35 @@
 
 /* === Angular JS filter layout - used by angular ngFilter === */
 
-.animate-enter,
-.animate-leave {
-    transition: 500ms ease-in all;
+
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-}
+} 
 
-.animate-enter.animate-enter-active,
+.animate-enter.animate-enter-active, 
 .animate-leave {
-    left: 0;
+    opacity: 1;
+    right: 0;
+    height: 30px;
 }
 
 .animate-leave.animate-leave-active,
 .animate-enter {
-    left: 500px;
+    opacity: 0;
+    right: -50px;
+    height: 0px;
 }
 
 /* === project-container - the layout for the projects === */
-#projects {
+.projects {
     position: relative;
     margin-top: 10vh;
 }
@@ -41,7 +51,7 @@
 }
 
 .project-container:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: rgba(255, 255, 255, 1);
     transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
@@ -55,6 +65,7 @@
 
 .project-container h5 {
     margin-top: 0px;
+    z-index: 1002;
 }
 
 .project-img {
@@ -66,15 +77,13 @@
 }
 
 .project-img img {
-    opacity: 0.85;
+    opacity: 1;
     height: 200px;
-    width: 200px;
+    width: 210px;
 }
 
 .project-img img:hover {
     opacity: 1;
-    height: 200px;
-    width: 200px;
 }
 
 
@@ -119,11 +128,11 @@
 
 .btn-view:hover {
     position: absolute;
+    font-size: 1.3vw;
     right: 0;
     bottom: 0;
     background-color: rgba(23, 166, 137, 1);
     border-color: rgba(23, 166, 137, 1);    /*background-color: rgba(17, 121, 100, 0);*/
-
     /*border-color: rgba(17, 121, 100, 0);*/
     transition: background-color 0.5s ease;
     -moz-transition: background-color 0.5s ease;
@@ -146,27 +155,41 @@
     background-color: rgba(26, 188, 156, 1);
 }
 
+/* ===  Project full Screen === */
+
+
+.fullscreen{
+    z-index: 9999; 
+    width: 100vw; 
+    height: 100vh; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+ }
+
 
 /* === #About - the layout for the projects === */
 
 
 .me-container {
-    height: 70vh;
+    height: 80vh;
     width: 97%;
-    background-color: rgba(255, 255, 255, 0.1);
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     min-width: 300px;
     float: left;
-    margin: 20px 0;
+    margin: 40px 0;
     position: relative;
 }
 
 .me-container:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 1);
-    transition: background-color 0.5s ease;
-    -moz-transition: background-color 0.5s ease;
-    -webkit-transition: background-color 0.5s ease;
-    -o-transition: background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(26, 188, 156, 1);
+    transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -webkit-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
     transition: color 0.5s ease;
     -moz-transition: color 0.5s ease;
     -webkit-transition: color 0.5s ease;
@@ -216,14 +239,58 @@
 }
 
 .me-img {
-    opacity: 0.85;
+    border-style: solid;
+    -webkit-border-style: solid;
+    -moz-border-style: solid;
+    border-width: medium;
+    -webkit-border-width: medium;
+    -moz-border-width: medium;
+    border-color: white;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    opacity: 1;
     height: 30vw;
     width: 30vw;
     margin-left: 3vw;
     margin-top: 3vw;
 }
 
-.me-img:hover {
-    opacity: 1;
+#resume {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 3vw;
+    font-weight: 700;
+    border-color: rgba(26, 188, 156, 1);
+    background-color: rgba(26, 188, 156, 1);
+    border-radius: 0;
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+}
+
+#resume:hover {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #117964;
+    border-color: #117964;    
+    /*background-color: rgba(17, 121, 100, 0);*/
+    /*border-color: rgba(17, 121, 100, 0);*/
+    transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
 }
 

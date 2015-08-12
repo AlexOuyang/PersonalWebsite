@@ -1,4 +1,7 @@
 
+
+http://acms.ucsd.edu/students/website-and-file-sharing/webpage.html
+
 1. Log on to the server:
 
                 ssh username@acsweb.ucsd.edu
