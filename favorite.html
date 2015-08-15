@@ -24,8 +24,11 @@
     <canvas id="canvas"></canvas>
     <div id="main-content">
       <div id="navigation">
+        <!--    <a class="navigation" href="#apps"><div>⊙ Apps</div></a>
+        <a class="navigation" href="#projects"><div>⊙ Projects</div></a>
+        <a class="navigation" href="#art"><div>⊙ Art</div></a> -->
         <a class="navigation" href="#top"><div>⊙ Home</div></a>
-        <!--    <a class="navigation" href="favorite.html"><div>⊙ Favorite</div></a> -->
+        <a class="navigation" href="#bottom"><div>⊙ Favorite</div></a>
         <a class="navigation" href="#bottom"><div>⊙ About Me</div></a>
         <!--  <a class="navigation" href="#Search" ><div>⊙ Search</div></a> -->
         <a id ="searchBar">
@@ -146,6 +149,7 @@
         </ul>
       </div>
       
+
       
       <div id="projects-app" class="projects">
         <ul>
@@ -158,9 +162,7 @@
               <h5 class="btn-tag btn btn-success"><em>Tags: {{show.tags}}</em></h5>
               <p>{{show.description}}</p>
             </div>
-            <div ng-if="show.haveExternalLink == true">
-              <a class="btn btn-success btn-view" href="{{show.url}}">View Project ➡</a>
-            </div>
+            <a class="btn btn-success btn-view" href="{{show.url}}">View Project ➡</a>
             <!--      <input type='button' value='fullscreen' onclick='fullscreen();' /> -->
           </li>
         </ul>

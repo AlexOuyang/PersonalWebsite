@@ -21,24 +21,27 @@ body {
 	margin: 0px;
 }
 
-/*position the loading image when the page is loading */
-.doc-loader
-{
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-}
-/*position the loading image when the page is loading */
-.doc-loader td
-{
-    vertical-align: middle;
-    text-align: center;
-	background-color: white;
+/* Hide all the scroll bars */
+::-webkit-scrollbar {
+	display: none;
 }
 
+/* Position the loading image when the page is loading */
+.doc-loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+/* Position the loading image when the page is loading */
+.doc-loader td {
+	vertical-align: middle;
+	text-align: center;
+	background-color: white;
+}
 
 ::selection {
 	background-color: rgba(0, 0, 0, 0.2);
@@ -121,8 +124,7 @@ a:hover {
 	float: left;
 	background-color: rgba(0, 0, 0, 0.7);
 	color: white;	/*color: rgba(26, 188, 156, 1);*/
-	height: 8vh;
-	/*width: 20vw;*/
+	height: 8vh;	/*width: 20vw;*/
 	width: 25vw;          /* Testing */
 	line-height: 8vh;
 	text-decoration: none;
@@ -159,14 +161,12 @@ a:hover {
 }
 
 /* === SEARCH FORM === */
-
 #searchBar {
-		display: inline-block;
+	display: inline-block;
 	float: left;
 	background-color: rgba(0, 0, 0, 0.7);
 	color: white;	/*color: rgba(26, 188, 156, 1);*/
-	height: 8vh;
-	/*width: 20vw;*/
+	height: 8vh;	/*width: 20vw;*/
 	width: 50vw;          /* Testing */
 	line-height: 8vh;
 	text-decoration: none;
@@ -185,15 +185,14 @@ a:hover {
 	border-bottom: none;
 }
 
-#searchBar:hover{
-		background-color: rgba(0, 0, 0, 0.3);
+#searchBar:hover {
+	background-color: rgba(0, 0, 0, 0.3);
 	color: rgba(255, 255, 255, 1);
 	border-bottom: none;
 }
 
 #search {
 	display: table;
-	width: 20vw;
 	height: 8vh;
 }
 
@@ -205,8 +204,7 @@ a:hover {
 }
 
 #search input[type='text'] {
-	margin-top: 1vh;
-	/*width: 15vw;*/
+	margin-top: 1vh;	/*width: 15vw;*/
 	width: 45vw;    /* Testing */
 	height: 6vh;
 	padding-left: 15px;
@@ -260,7 +258,7 @@ background-color: rgba(26, 188, 156, 0.3);
 
 #boardLayout ul li {
 	float: left;
-	width: 7.69vw;/*	background-color: rgba(0, 0, 0, .2);
+	width: 7.65vw;/*	background-color: rgba(0, 0, 0, .2);
 	*/
 	list-style: none;
 	margin-right: 0%;
@@ -337,30 +335,30 @@ font-weight: 800;
 }
 
 /*#social_media_1 {
-	background-color: rgba(0, 0, 0, .8);
-	position: fixed;
-	bottom: 0;
-	left: 8vw;
-	display: inline-block;
-	z-index: 1001;
+background-color: rgba(0, 0, 0, .8);
+position: fixed;
+bottom: 0;
+left: 8vw;
+display: inline-block;
+z-index: 1001;
 }
 
 #social_media_2 {
-		background-color: rgba(0, 0, 0, .8);
-	position: fixed;
-	bottom:0;
-	left: 16vw;
-	display: inline-block;
-	z-index: 1001;
+	background-color: rgba(0, 0, 0, .8);
+position: fixed;
+bottom:0;
+left: 16vw;
+display: inline-block;
+z-index: 1001;
 }
 
 #social_media_3 {
-		background-color: rgba(0, 0, 0, .8);
-	position: fixed;
-	bottom: 0;
-	left: 24vw;
-	display: inline-block;
-	z-index: 1001;
+	background-color: rgba(0, 0, 0, .8);
+position: fixed;
+bottom: 0;
+left: 24vw;
+display: inline-block;
+z-index: 1001;
 }*/
 
 /* === RESPONSIVE CSS, acts on the contents when window resises to less than 667px=== */
