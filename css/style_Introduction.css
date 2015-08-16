@@ -334,32 +334,10 @@ font-weight: 800;
 	font-weight: 800;
 }
 
-/*#social_media_1 {
-background-color: rgba(0, 0, 0, .8);
-position: fixed;
-bottom: 0;
-left: 8vw;
-display: inline-block;
-z-index: 1001;
+#boardLayout ul li.social_media {
+	font-family: 'Carrois Gothic SC';
 }
 
-#social_media_2 {
-	background-color: rgba(0, 0, 0, .8);
-position: fixed;
-bottom:0;
-left: 16vw;
-display: inline-block;
-z-index: 1001;
-}
-
-#social_media_3 {
-	background-color: rgba(0, 0, 0, .8);
-position: fixed;
-bottom: 0;
-left: 24vw;
-display: inline-block;
-z-index: 1001;
-}*/
 
 /* === RESPONSIVE CSS, acts on the contents when window resises to less than 667px=== */
 

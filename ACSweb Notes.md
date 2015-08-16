@@ -2,6 +2,8 @@
 
 http://acms.ucsd.edu/students/website-and-file-sharing/webpage.html
 
+How to use UCSD Acsweb server to hose your own website
+
 1. Log on to the server:
 
                 ssh username@acsweb.ucsd.edu
